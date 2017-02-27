@@ -13,12 +13,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class Select12S6 {
+public class Select12S12 {
 	private static List list = new ArrayList();
 	private static List finallist = new ArrayList();
 
 	public static void main(String[] args) throws Exception {
-		File file = new File("12xuan6.txt");
+		File file = new File("12xuan12.txt");
 		List alist = new ArrayList();
 		List resultlist = new ArrayList();
 		Set set = new HashSet();
@@ -39,7 +39,7 @@ public class Select12S6 {
 		}
 		br.close();
 		if((alist.size())%4==0){
-			for (int i = 0; i < (alist.size())/3; i++) {
+			for (int i = 0; i < (alist.size())/4; i++) {
 				int[] temp1 = new int[3] ;
 				int[] temp2 = new int[3] ;
 				int[] temp3 = new int[3] ;
@@ -56,6 +56,7 @@ public class Select12S6 {
 					temp3 = (int[]) alist.get(i+2+3*i);
 					temp4 = (int[]) alist.get(i+3+3*i);
 				}
+				
 				for (int j = 0; j < temp1.length; j++) {
 					result[j]=temp1[j];
 				}
@@ -72,7 +73,7 @@ public class Select12S6 {
 		}
 		for (int i = 0; i < resultlist.size(); i++) {
 			//zuhe((int[]) resultlist.get(i), 2);
-			combine((int[]) resultlist.get(i), 6);
+			combine((int[]) resultlist.get(i), 12);
 		}
 		for (int i = 0; i < list.size(); i++) {
 			int sum = 1;
@@ -84,17 +85,17 @@ public class Select12S6 {
 					sum++;
 				}
 			}
-			set.add(new Result12S6((Bean12S6) list.get(i),sum));
+			set.add(new Result12S12((Bean12S12) list.get(i),sum));
 		}
 		finallist.addAll(set);
 		Collections.sort(finallist);
-		File file1 = new File("12xuan6out.txt");
+		File file1 = new File("12xuan12out.txt");
 		if(file1.exists()){
 			file1.delete();
 		}
-		FileWriter writer = new FileWriter("12xuan6out.txt", true);
+		FileWriter writer = new FileWriter("12xuan12out.txt", true);
 		for (Iterator iterator = finallist.iterator(); iterator.hasNext();) {
-			Result12S6 object = (Result12S6) iterator.next();
+			Result12S12 object = (Result12S12) iterator.next();
 			writer.write(object.toString()+"\r\n");
 			writer.write("\r\n");
 			writer.flush();
@@ -128,7 +129,7 @@ public class Select12S6 {
 		   print(tempNum);// 打印辅助数组 
 		   int[] arrt = new int[m];
 		   arrt = createResult(a, tempNum, m);// 打印第一中默认组合
-		   list.add(new Bean12S6(arrt[0],arrt[1],arrt[2],arrt[3],arrt[4],arrt[5]));
+		   list.add(new Bean12S12(arrt[0],arrt[1],arrt[2],arrt[3],arrt[4],arrt[5],arrt[6],arrt[7],arrt[8],arrt[9],arrt[10],arrt[1]));
 		   
 		   do {
 		    int pose = 0; // 记录改变的位置
@@ -145,7 +146,7 @@ public class Select12S6 {
 		    print(tempNum);// 打印辅助数组
 		    int[] arrt1 = new int[m];
 		    arrt1 = createResult(a, tempNum, m);// 打印第一中默认组合
-		    list.add(new Bean12S6(arrt1[0],arrt1[1],arrt1[2],arrt1[3],arrt1[4],arrt1[5]));
+		    list.add(new Bean12S12(arrt1[0],arrt1[1],arrt1[2],arrt1[3],arrt1[4],arrt1[5],arrt1[6],arrt1[7],arrt1[8],arrt1[9],arrt1[10],arrt1[11]));
 		    
 
 		    // 同时将其左边的所有“1”全部移动到数组的最左端。
@@ -224,8 +225,9 @@ public class Select12S6 {
 			//System.out.println();
 			System.out.println(stb.toString());
 			String[] arr = stb.toString().split(" ");
-			list.add(new Bean12S6(Integer.valueOf(arr[0]),Integer.valueOf(arr[1]),
-					Integer.valueOf(arr[2]),Integer.valueOf(arr[3]),Integer.valueOf(arr[4]),Integer.valueOf(arr[5])));
+			list.add(new Bean12S12(Integer.valueOf(arr[0]),Integer.valueOf(arr[1]),
+					Integer.valueOf(arr[2]),Integer.valueOf(arr[3]),Integer.valueOf(arr[4]),Integer.valueOf(arr[5]),Integer.valueOf(arr[6])
+							,Integer.valueOf(arr[7]),Integer.valueOf(arr[8]),Integer.valueOf(arr[9]),Integer.valueOf(arr[10]),Integer.valueOf(arr[11])));
 			return;
 		}
 			

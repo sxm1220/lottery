@@ -45,10 +45,17 @@ public class Select12S2 {
 				int[] temp3 = new int[3] ;
 				int[] temp4 = new int[3] ;
 				int[] result = new int[12] ; 
-				temp1 = (int[]) alist.get(0+3*i);
-				temp2 = (int[]) alist.get(1+3*i);
-				temp3 = (int[]) alist.get(2+3*i);
-				temp4 = (int[]) alist.get(3+3*i);
+				if(i==0){
+					temp1 = (int[]) alist.get(0+3*i);
+					temp2 = (int[]) alist.get(1+3*i);
+					temp3 = (int[]) alist.get(2+3*i);
+					temp4 = (int[]) alist.get(3+3*i);
+				}else{
+					temp1 = (int[]) alist.get(i+3*i);
+					temp2 = (int[]) alist.get(i+1+3*i);
+					temp3 = (int[]) alist.get(i+2+3*i);
+					temp4 = (int[]) alist.get(i+3+3*i);
+				}
 				for (int j = 0; j < temp1.length; j++) {
 					result[j]=temp1[j];
 				}

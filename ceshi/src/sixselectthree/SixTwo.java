@@ -48,13 +48,13 @@ public class SixTwo {
 			temp++;
 		}
 		br.close();
-		for (int i = 0; i < alist.size(); i++) {
-			if(i%2!=0){
+		for (int i = 0; i < alist.size()/2; i++) {
+			//if(i%2!=0){
 				int[] temp1 = new int[3] ;
 				int[] temp2 = new int[3] ; 
 				int[] result = new int[6] ; 
-				temp1 = (int[]) alist.get(i-1);
-				temp2 = (int[]) alist.get(i);
+				temp1 = (int[]) alist.get(i*2);
+				temp2 = (int[]) alist.get(i*2+1);
 				for (int j = 0; j < temp1.length; j++) {
 					result[j]=temp1[j];
 				}
@@ -62,7 +62,7 @@ public class SixTwo {
 					result[3+j]=temp2[j];
 				}
 				resultlist.add(result);
-			}
+			//}
 		}
 		for (int i = 0; i < resultlist.size(); i++) {
 			//zuhe((int[]) resultlist.get(i), 2);
