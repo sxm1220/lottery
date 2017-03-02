@@ -39,7 +39,7 @@ public class Select12S6 {
 		}
 		br.close();
 		if((alist.size())%4==0){
-			for (int i = 0; i < (alist.size())/3; i++) {
+			for (int i = 0; i < (alist.size())/4; i++) {
 				int[] temp1 = new int[3] ;
 				int[] temp2 = new int[3] ;
 				int[] temp3 = new int[3] ;

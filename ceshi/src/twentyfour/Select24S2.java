@@ -33,7 +33,7 @@ public class Select24S2
       line = line.trim().replace(" ", "");
       if (!"".equals(line))
       {
-        String[] strArr = line.split("锟斤拷");
+        String[] strArr = line.split("，");
         for (int i = 0; i < strArr.length; i++) {
           intArr[i] = Integer.valueOf(strArr[i]).intValue();
         }
@@ -135,7 +135,7 @@ public class Select24S2
     }
     else
     {
-      System.out.println("琛屾暟閿欒锛屽簲鑳借8鏁撮櫎");
+      System.out.println("实际有效行数不正确，行数应能被8整除，请检查!");
     }
   }
   
@@ -215,7 +215,7 @@ public class Select24S2
   
   public static void print(int[] a)
   {
-    System.out.println("鐢熸垚杈呭姪鏁扮粍涓猴細");
+    System.out.println("生成的辅助数组为：");
     for (int i = 0; i < a.length; i++) {
       System.out.print(a[i]);
     }

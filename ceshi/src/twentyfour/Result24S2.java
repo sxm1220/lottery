@@ -22,7 +22,7 @@ public class Result24S2
   
   public String toString()
   {
-    return "ç»„åˆï¼š" + this.bean24S2.toString() + "æ•°é‡ï¼š" + this.count;
+    return "×éºÏ£º" + this.bean24S2.toString() + "ÊıÁ¿£º" + this.count;
   }
   
   public int hashCode()
