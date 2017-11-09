@@ -1,0 +1,1 @@
+java -Xms256M -Xmx512M twentytwo.Select22S2
