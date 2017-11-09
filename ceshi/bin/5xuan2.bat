@@ -1,1 +1,0 @@
-java -Xms256M -Xmx512M  fiveselectthree.Select5S2
